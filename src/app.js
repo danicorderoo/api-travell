@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require("cors");
 const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
 const morgan = require("morgan");
@@ -12,6 +13,11 @@ const server = express();
 server.name = "API";
 
 //MiddleWares
+server.use(
+  cors({
+    origin: "https://api-travell.onrender.com",
+  })
+);
 server.use(bodyParser.urlencoded({ extended: true, limit: "50mb" }));
 server.use(bodyParser.json({ limit: "50mb" }));
 server.use(cookieParser());
