@@ -15,7 +15,7 @@ server.name = "API";
 //MiddleWares
 server.use(
   cors({
-    origin: "https://api-travell.onrender.com",
+    origin: "https://app-travell.vercel.app/",
   })
 );
 server.use(bodyParser.urlencoded({ extended: true, limit: "50mb" }));
