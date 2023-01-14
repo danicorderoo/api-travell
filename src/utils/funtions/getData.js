@@ -1,7 +1,7 @@
 const axios = require("axios");
 
-const getData = (req, res, Country) => {
-  axios
+const getData = async (req, res, Country) => {
+  await axios
     .get("https://restcountries.com/v3.1/all")
     .then((countries) => {
       countries = countries?.data.map((country) => ({
