@@ -13,11 +13,7 @@ const server = express();
 server.name = "API";
 
 //MiddleWares
-server.use(
-  cors({
-    origin: "https://app-travell.vercel.app",
-  })
-);
+
 server.use(bodyParser.urlencoded({ extended: true, limit: "50mb" }));
 server.use(bodyParser.json({ limit: "50mb" }));
 server.use(cookieParser());
