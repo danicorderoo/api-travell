@@ -8,12 +8,17 @@ const handlerError = require("./utils/middleware/handlerError.js");
 const setHeaders = require("./utils/middleware/setHeaders.js");
 require("./db.js");
 
+const allowedOrigins = [
+  "http://localhost:3001",
+  "https://api-travell-kquh.onrender.com",
+];
+
 const server = express();
 
 server.name = "API";
 
 //MiddleWares
-
+server.use(cors()); // Permite cualquier origen
 server.use(bodyParser.urlencoded({ extended: true, limit: "50mb" }));
 server.use(bodyParser.json({ limit: "50mb" }));
 server.use(cookieParser());
