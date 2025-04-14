@@ -1,6 +1,7 @@
 const allowedOrigins = [
   "http://localhost:3000", // <-- este es el que te falta
   "http://localhost:3001",
+  "http://localhost:5173",
   "https://app-travell.vercel.app",
   "https://api-travell-kquh.onrender.com",
 ];
