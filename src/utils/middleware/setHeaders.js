@@ -4,6 +4,7 @@ const allowedOrigins = [
   "http://localhost:5173",
   "https://app-travell.vercel.app",
   "https://api-travell-kquh.onrender.com",
+  "https://travell-dc.vercel.app/"
 ];
 
 const setHeaders = (req, res, next) => {
